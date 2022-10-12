@@ -1,0 +1,42 @@
+"""
+man7-3.py
+2022.03.16 수정사항
+1. https://kr.investing.com 사이트의 개편됨 기존의 코드 동작안됨
+2. containers = content.find('span', {'data-test': 'instrument-price-last'}) 로 코드 변경
+"""
+
+"""
+main3-3.py
+2022.03.16 수정사항
+1. playsound 한글파일을 읽지 못해 저장파일을 영어로 변경
+2. 파일의 경로를 .py의 실행결로로 이동하는 코드 추가
+"""
+
+"""
+main11-1.py
+2022.04.08 수정사항
+1. pyautogui.locateOnScreen 한글파일을 읽지 못해 사진이름을 영어로 변경
+2. 파일의 경로를 .py의 실행결로로 이동하는 코드 추가
+"""
+
+"""
+main11-2.py
+2022.04.08 수정사항
+1. pyautogui.locateOnScreen 한글파일을 읽지 못해 사진이름을 영어로 변경
+2. 파일의 경로를 .py의 실행결로로 이동하는 코드 추가
+"""
+
+"""
+main11-3.py
+2022.04.08 수정사항
+1. pyautogui.locateOnScreen 한글파일을 읽지 못해 사진이름을 영어로 변경
+2. 파일의 경로를 .py의 실행결로로 이동하는 코드 추가
+"""
+
+"""
+main11-4.py
+2022.04.08 수정사항
+1. pyautogui.locateOnScreen 한글파일을 읽지 못해 사진이름을 영어로 변경
+2. 파일의 경로를 .py의 실행결로로 이동하는 코드 추가
+"""
+
