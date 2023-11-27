@@ -1,4 +1,7 @@
 import openai
+import requests
+from PIL import Image
+from io import BytesIO
 import streamlit as st
 
 openai.api_type = "azure"
@@ -16,4 +19,8 @@ if(button_click):
         n=2
     )
 
-    st.write(generation_response["data"][0]["url"])
+    image = Image.open(BytesIO(requests.get(generation_response["data"][0]["url"]).content))
+    st.image(image, caption=prompt)
+
+    #st.write(generation_response["data"][0]["url"])
+

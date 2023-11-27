@@ -22,7 +22,7 @@ if(button_click):
 
     with st.spinner('Wait for it...'):
         resume = openai.ChatCompletion.create(
-            engine="devmodel", # engine = "deployment_name".
+            engine="devgpt35", # engine = "deployment_name".
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": query + "가 뭐니"}  
