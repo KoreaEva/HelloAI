@@ -1,0 +1,138 @@
+What is generative AI?
+Generative AI can learn from existing artifacts to generate new, realistic artifacts (at scale) that reflect the characteristics of the training data but don’t repeat it. It can produce a variety of novel content, such as images, video, music, speech, text, software code and product designs.  
+Generative AI uses a number of techniques that continue to evolve. Foremost are AI foundation models, which are trained on a broad set of unlabeled data that can be used for different tasks, with additional fine-tuning. Complex math and enormous computing power are required to create these trained models, but they are, in essence, prediction algorithms. 
+Today, generative AI most commonly creates content in response to natural language requests — it doesn’t require knowledge of or entering code — but the enterprise use cases are numerous and include innovations in drug and chip design and material science development. (Also see “What are some practical uses of generative AI?”)
+
+
+
+
+What’s behind the sudden hype about generative AI?
+Gartner has tracked generative AI on its Hype Cycle™ for Artificial Intelligence since 2020 (also, generative AI was among our Top Strategic Technology Trends for 2022), and the technology has moved from the Innovation Trigger phase to the Peak of Inflated Expectations. But generative AI only hit mainstream headlines in late 2022 with the launch of ChatGPT, a chatbot capable of very human-seeming interactions.
+ChatGPT, launched by OpenAI, became wildly popular overnight and galvanized public attention. (OpenAI’s DALL·E 2 tool similarly generates images from text in a related generative AI innovation.)
+Gartner sees generative AI becoming a general-purpose technology with an impact similar to that of the steam engine, electricity and the internet. The hype will subside as the reality of implementation sets in, but the impact of generative AI will grow as people and enterprises discover more innovative applications for the technology in daily work and life.
+FAQ on ChatGPT 
+What are the benefits and applications of generative AI?
+Foundation models, including generative pretrained transformers (which drives ChatGPT), are among the AI architecture innovations that can be used to automate, augment humans or machines, and autonomously execute business and IT processes. 
+The benefits of generative AI include faster product development, enhanced customer experience and improved employee productivity, but the specifics depend on the use case. End users should be realistic about the value they are looking to achieve, especially when using a service as is, which has major limitations. Generative AI creates artifacts that can be inaccurate or biased, making human validation essential and potentially limiting the time it saves workers. Gartner recommends connecting use cases to KPIs to ensure that any project either improves operational efficiency or creates net new revenue or better experiences.
+In a recent Gartner webinar poll of more than 2,500 executives, 38% indicated that customer experience and retention is the primary purpose of their generative AI investments. This was followed by revenue growth (26%), cost optimization (17%) and business continuity (7%).
+
+
+
+
+What are the risks of generative AI?
+The risks associated with generative AI are significant and rapidly evolving. A wide array of threat actors have already used the technology to create “deep fakes” or copies of products, and generate artifacts to support increasingly complex scams.
+ChatGPT and other tools like it are trained on large amounts of publicly available data. They are not designed to be compliant with General Data Protection Regulation (GDPR) and other copyright laws, so it’s imperative to pay close attention to your enterprises’ uses of the platforms. 
+Oversight risks to monitor include:
+	•	Lack of transparency. Generative AI and ChatGPT models are unpredictable, and not even the companies behind them always understand everything about how they work.
+	•	Accuracy. Generative AI systems sometimes produce inaccurate and fabricated answers. Assess all outputs for accuracy, appropriateness and actual usefulness before relying on or publicly distributing information. 
+	•	Bias. You need policies or controls in place to detect biased outputs and deal with them in a manner consistent with company policy and any relevant legal requirements.
+	•	Intellectual property (IP) and copyright. There are currently no verifiable data governance and protection assurances regarding confidential enterprise information. Users should assume that any data or queries they enter into the ChatGPT and its competitors will become public information, and we advise enterprises to put in place controls to avoid inadvertently exposing IP. 
+	•	Cybersecurity and fraud. Enterprises must prepare for malicious actors’ use of generative AI systems for cyber and fraud attacks, such as those that use deep fakes for social engineering of personnel, and ensure mitigating controls are put in place. Confer with your cyber-insurance provider to verify the degree to which your existing policy covers AI-related breaches.
+	•	Sustainability. Generative AI uses significant amounts of electricity. Choose vendors that reduce power consumption and leverage high-quality renewable energy to mitigate the impact on your sustainability goals.
+Gartner also recommends considering the following questions:
+	•	Who defines responsible use of generative AI, especially as cultural norms evolve and social engineering approaches vary across geographies? Who ensures compliance? What are the consequences for irresponsible use? 
+	•	In the event something goes wrong, how can individuals take action?
+	•	How do users give and remove consent (opt in or opt out)? What can be learned from the privacy debate?
+	•	Will using generative AI help or hurt trust in your organization — and institutions overall?
+	•	How can we ensure that content creators and owners keep control of their IP and are compensated fairly? What should new economic models look like? 
+	•	Who will ensure proper functioning throughout the entire life cycle, and how will they do so? Do boards need an AI ethics lead, for example?
+Finally, it’s important to continually monitor regulatory developments and litigation regarding generative AI. China and Singapore have already put in place new regulations regarding the use of generative AI, while Italy temporarily. The U.S., Canada, India, the U.K. and the EU are currently shaping their regulatory environments.
+Also see, “What are the best practices for using generative AI?” and “Should I craft a usage policy for generative AI?”
+GenAI Risks & Opportunities 
+What are some practical uses of generative AI today?
+The field of generative AI will progress rapidly in both scientific discovery and technology commercialization, but use cases are emerging quickly in creative content, content improvement, synthetic data, generative engineering and generative design. 
+In-use, high-level practical applications today include the following.
+	•	Written content augmentation and creation: Producing a “draft” output of text in a desired style and length
+	•	Question answering and discovery: Enabling users to locate answers to input, based on data and prompt information
+	•	Tone: Text manipulation, to soften language or professionalize text
+	•	Summarization: Offering shortened versions of conversations, articles, emails and webpages
+	•	Simplification: Breaking down titles, creating outlines and extracting key content
+	•	Classification of content for specific use cases: Sorting by sentiment, topic, etc.
+	•	Chatbot performance improvement: Bettering “sentity” extraction, whole-conversation sentiment classification and generation of journey flows from general descriptions
+	•	Software coding: Code generation, translation, explanation and verification
+Emerging use cases with long-term impacts include:
+	•	Creating medical images that show the future development of a disease 
+	•	Synthetic data helping augment scarce data, mitigate bias, preserve data privacy and simulate future scenarios
+	•	Applications proactively suggesting additional actions to users and providing them with information
+	•	Legacy code modernization
+
+
+▶
+How will generative AI contribute business value?
+Generative AI provides new and disruptive opportunities to increase revenue, reduce costs, improve productivity and better manage risk. In the near future, it will become a competitive advantage and differentiator. 
+Gartner splits the opportunities into three categories.
+Revenue opportunities
+Product development: Generative AI will enable enterprises to create new products more quickly. These may include new drugs, less toxic household cleaners, novel flavors and fragrances, new alloys, and faster and better diagnoses.
+New revenue channels: Gartner research shows that enterprises with greater levels of AI maturity will gain greater benefits to their revenue.
+Cost and productivity opportunities
+Worker augmentation: Generative AI can augment workers’ ability to draft and edit text, images and other media. It can also summarize, simplify and classify content; generate, translate and verify software code; and improve chatbot performance. At this stage, the technology is highly proficient at creating a wide range of artifacts quickly and at scale.
+Long-term talent optimization: Employees will be distinguished by their ability to conceive, execute and refine ideas, projects, processes, services and relationships in partnership with AI. This symbiotic relationship will accelerate time to proficiency and greatly extend the range and competency of workers across the board.
+Process improvement: Generative AI can derive real, in-context value from vast stores of content, which until now may have gone largely unexploited. This will change workflows.
+Risk opportunities
+Risk mitigation: Generative AI’s ability to analyze and provide broader and deeper visibility of data, such as customer transactions and potentially faulty software code, enhances pattern recognition and the ability to identify potential risks to the enterprise more quickly. 
+Sustainability: Generative AI may help enterprises comply with sustainability regulations, mitigate the risk of stranded assets, and embed sustainability into decision making, product design and processes.
+Impact of Gen AI 
+Which industries are most impacted by generative AI?
+Generative AI will affect the pharmaceutical, manufacturing, media, architecture, interior design, engineering, automotive, aerospace, defense, medical, electronics and energy industries by augmenting core processes with AI models. It will impact marketing, design, corporate communications, and training and software engineering by augmenting the supporting processes that span many organizations. For example:
+	•	We believe that by 2025, more than 30% of new drugs and materials will be systematically discovered using generative AI techniques, up from zero today. Generative AI looks promising for the pharmaceutical industry, given the opportunity to reduce costs and time in drug discovery.
+	•	We predict that by 2025, 30% of outbound marketing messages from large organizations will be synthetically generated, up from less than 2% in 2022. Text generators like GPT-3 can already be used to create marketing copy and personalized advertising.
+	•	In the manufacturing, automotive, aerospace and defense industries, generative design can create designs optimized to meet specific goals and constraints, such as performance, materials and manufacturing methods. This accelerates the design process by producing an array of potential solutions for engineers to explore.
+
+What are the best practices for using generative AI?
+Technologies that provide AI trust and transparency will become an important complement to generative AI solutions. Also, executive leaders should follow this guidance for ethical use of LLMs and other generative AI models:
+	•	Start inside. Before using generative AI to create customer- or other external-facing content, test extensively with internal stakeholders and employee use cases. You don’t want hallucinations to harm your business.
+	•	Prize transparency. Be forthcoming with people, whether they be staff, customers or citizens, about the fact that they are interacting with a machine by clearly labeling any conversation multiple times throughout.
+	•	Do your due diligence. Set up processes and guardrails to track biases and other issues of trustworthiness. Do so by validating results and continually testing for the model going off course.
+	•	Address privacy and security concerns. Ensure that sensitive data is neither input nor derived. Confirm with the model provider that this data won’t be used for machine learning beyond your organization.
+	•	Take it slow. Keep functionality in beta for an extended period of time. This helps temper expectations for perfect results.
+Responsible Use of NLT 
+
+
+▶
+Should I craft a usage policy for generative AI?
+Your workforce is likely already using generative AI, either on an experimental basis or to support their job-related tasks. To avoid “shadow” usage and a false sense of compliance, Gartner recommends crafting a usage policy rather than enacting an outright ban. 
+Keep the policy simple — it can be as streamlined as three don’ts and two do’s if using ChatGPT or other off-the-shelf model:
+	•	Don’t input any personally identifiable information.
+	•	Don’t input any sensitive information.
+	•	Don’t input any company IP.
+	•	Do turn off history if using external tools (like ChatGPT) that enable that choice.
+	•	Do closely monitor outputs, which are subject to sometimes subtle but meaningful hallucinations, factual errors and biased or inappropriate statements.
+If the company is using its own instance of a large language model, the privacy concerns that inform limiting inputs go away. However, the need to keep a close eye on outputs remains.
+
+
+▶
+How will generative AI impact the future of work?
+In business, many people are content creators of some kind. Generative AI will significantly alter their jobs, whether it be by creating text, images, hardware designs, music, video or something else. In response, workers will need to become content editors, which requires a different set of skills than content creation.
+Meanwhile, the way the workforce interacts with applications will change as applications become conversational, proactive and interactive, requiring a redesigned user experience. In the near term, generative AI models will move beyond responding to natural language queries and begin suggesting things you didn’t ask for. For example, your request for a data-driven bar chart might be answered with alternative graphics the model suspects you could use. In theory at least, this will increase worker productivity, but it also challenges conventional thinking about the need for humans to take the lead on developing strategy.
+The net change in the workforce will vary dramatically depending on such factors as industry, location, size and offerings of the enterprise.
+
+Where should I start with generative AI?
+Many enterprises have generative AI pilots for code generation, text generation or visual design underway. To establish a pilot, you can take one of three routes:
+	1	Off-the-shelf. Use an existing foundational model directly by inputting prompts. You might, for example, ask the model to create a job description for a software engineer or suggest alternative subject lines for marketing emails.
+	2	Prompt engineering. Program and connect software to and leverage a foundational model. This technique, which is the most common of the three, allows you to use public services while protecting IP and leveraging private data to create more precise, specific and useful responses. Building an HR benefits chatbot that answers employee questions about company-specific policies is an example of prompt engineering.
+	3	Custom. Building a new foundational model goes beyond the reach of most companies, but it’s possible to tune a model. This involves adding a layer or proprietary data in a way that significantly alters the way the foundational model behaves. While costly, customizing a model offers the highest level of flexibility.
+Create an AI Strategy 
+What do I need to buy to enable generative AI?
+The costs for generative AI will range from negligible to many millions depending on the use case, scale and requirements of the company. Small and midsize enterprises may derive significant business value from the free versions of public, openly hosted applications, such as ChatGPT, or by paying low subscription fees. For example, OpenAI is currently $20 per user per month. However, free and low-cost options come with minimal protection of enterprise data and associated output risks.
+Larger enterprises and those that desire greater analysis or use of their own enterprise data with higher levels of security and IP and privacy protections will need to invest in a range of custom services. This can include building licensed, customizable and proprietary models with data and machine learning platforms, and will require working with vendors and partners. In this instance, costs can be in the millions of dollars.
+It’s also worth noting that generative AI capabilities will increasingly be built into the software products you likely use everyday, like Bing, Office 365, Microsoft 365 Copilot and Google Workspace. This is effectively a “free” tier, though vendors will ultimately pass on costs to customers as part of bundled incremental price increases to their products.
+
+What does Gartner predict for the future of generative AI use?
+Generative AI is primed to make an increasingly strong impact on enterprises over the next five years. Gartner predicts that:
+	•	By 2024, 40% of enterprise applications will have embedded conversational AI, up from less than 5% in 2020.
+	•	By 2025, 30% of enterprises will have implemented an AI-augmented development and testing strategy, up from 5% in 2021.
+	•	By 2026, generative design AI will automate 60% of the design effort for new websites and mobile apps. 
+	•	By 2026, over 100 million humans will engage robocolleagues to contribute to their work.
+	•	By 2027, nearly 15% of new applications will be automatically generated by AI without a human in the loop. This is not happening at all today.
+GenAI Changes Innovation & Operations 
+Who are the major tech providers in the generative AI market?
+The Generative AI marketplace is on fire. Beyond the big platform players, there are many hundreds of specialty providers funded by ample venture capital and a wave of new open-source models and capabilities. Enterprise application providers, such as Salesforce and SAP, are building LLM capabilities into their platforms. Organizations like Microsoft, Google, Amazon Web Services (AWS) and IBM have invested hundreds of millions of dollars and massive compute power to build the foundational models on which services like ChatGPT and others depend. 
+Gartner considers the current major players to be as follows:
+	•	Google has two large language models, Palm, a multimodal model, and Bard, a pure language model. They are embedding their generative AI technology into their suite of workplace applications, which will immediately get it in the hands of millions of people.
+	•	Microsoft and OpenAI are marching in lockstep. Like Google, Microsoft is embedding generative AI technology into its products, but it has the first-mover advantage and buzz of ChatGPT on its side.
+	•	Amazon has partnered with Hugging Face, which has a number of LLMs available on an open-source basis, to build solutions. Amazon also has Bedrock, which provides access to generative AI on the cloud via AWS, and has announced plans for Titan, a set of two AI models that create text and improve searches and personalization.
+	•	IBM has multiple foundation models and a strong ability to fine-tune both its and third-party models by injecting data and retraining and employing the model.
+Conversational AI Platforms 
+Is this the start of artificial general intelligence (AGI)?
+It depends whom you ask. AGI, the ability of machines to match or exceed human intelligence and solve problems they never encountered during training, provokes vigorous debate and a mix of awe and dystopia. AI is certainly becoming more capable and is displaying sometimes surprising emergent behaviors that humans did not program.
+The likely path is the evolution of machine intelligence that mimics human intelligence but is ultimately aimed at helping humans solve complex problems. This will require governance, new regulation and the participation of a wide swath of society.
