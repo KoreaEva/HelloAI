@@ -2,15 +2,16 @@ from pytube import YouTube
 from moviepy.editor import VideoFileClip
 import whisper
 import os
-import re
-
-file_name = ''
-current_path = os.getcwd() 
+from tqdm import tqdm
 
 from azure.ai.translation.text import TextTranslationClient, TranslatorCredential
 from azure.ai.translation.text.models import InputTextItem
 from azure.core.exceptions import HttpResponseError
 
+file_name = ''
+current_path = os.getcwd() 
+
+# 텍스트 번역 서비스에 필요한 인증 정보
 key = "4047eaf8a74541beadacbad7b070099d"
 endpoint = "https://api.cognitive.microsofttranslator.com/"
 region = "koreacentral"
@@ -22,6 +23,7 @@ text_translator = TextTranslationClient(endpoint=endpoint, credential=credential
 def get_filename_from_path(file_path):
     return os.path.basename(file_path)
 
+# 유튜브 동영상 다운로드 함수
 def download_youtube_video(url, download_path='.'):
     global file_name
 
@@ -35,7 +37,6 @@ def download_youtube_video(url, download_path='.'):
         # 다운로드 경로 지정
         downloaded_file = stream.download(output_path=download_path)
 
-        file_name = get_filename_from_path(downloaded_file)
         
         print(f"동영상 다운로드 완료: {yt.title}")
         return downloaded_file
@@ -43,6 +44,7 @@ def download_youtube_video(url, download_path='.'):
         print(f"동영상 다운로드 중 오류 발생: {e}")
         return None
 
+# 동영상에서 오디오 추출 함수
 def extract_audio(video_path, audio_path):
     try:
         video_clip = VideoFileClip(video_path)
@@ -51,10 +53,12 @@ def extract_audio(video_path, audio_path):
     except Exception as e:
         print(f"오디오 추출 중 오류 발생: {e}")
 
+# 오디오에서 자막 추출 함수
 def generate_subtitles(audio_path, srt_path):
     try:
-        model = whisper.load_model("base")
+        model = whisper.load_model("medium")
         audio_file_path = os.path.join(current_path,audio_path)
+        print(f"자막 추출 중: {srt_path}")
         result = model.transcribe(audio_file_path)
         
         with open(srt_path, 'w', encoding='utf-8') as srt_file:
@@ -71,6 +75,7 @@ def generate_subtitles(audio_path, srt_path):
     except Exception as e:
         print(f"SRT 파일 생성 중 오류 발생: {e}")
 
+# 시간을 SRT 형식으로 변환하는 함수
 def format_timestamp(seconds):
     hours = int(seconds // 3600)
     minutes = int((seconds % 3600) // 60)
@@ -78,6 +83,7 @@ def format_timestamp(seconds):
     milliseconds = int((seconds % 1) * 1000)
     return f"{hours:02}:{minutes:02}:{seconds:02},{milliseconds:03}"
 
+# SRT 파일을 한국어로 번역하는 함수
 def translate_srt_to_korean(input_srt_path, output_srt_path,source_lang="en", target_lang=['ko']):
     source_language = source_lang
     target_languages = target_lang
@@ -122,48 +128,35 @@ def translate_srt_to_korean(input_srt_path, output_srt_path,source_lang="en", ta
     #print(translated_text)
     return #translated_text
 
+# SRT 파일을 작성하는 함수
 def write_srt(file_path, content):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
-# def translate_srt(file_path, output_path, source_lang="auto", target_lang="en"):
-#     srt_content = read_srt(file_path)
-    
-#     # SRT 파일 파싱
-#     subtitles = re.split(r'(\d+\n\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}\n)', srt_content)
-    
-#     translated_subtitles = []
-    
-#     for i in range(1, len(subtitles), 3):
-#         subtitle_block = subtitles[i] + subtitles[i + 1]
-#         text = subtitles[i + 2]
-#         translated_text = translate_text(text, source_lang, target_lang)
-#         translated_subtitles.append(subtitle_block + translated_text + '\n')
-    
-#     translated_srt_content = ''.join(translated_subtitles)
-    
-#     write_srt(output_path, translated_srt_content)
-
-# 사용 예시
-# translate_srt('input.srt', 'translated_output.srt', source_lang="auto", target_lang="en")
-
-
+# 주소가 인터넷 주소인지 확인하는 함수
+def is_internet_address(path):
+    # 인터넷 주소는 일반적으로 'http://' 또는 'https://'로 시작합니다.
+    if path.startswith("http://") or path.startswith("https://"):
+        return True
+    # 로컬 주소는 보통 'file://', 절대 경로 또는 상대 경로 형식을 가집니다.
+    if path.startswith("file://") or os.path.isabs(path) or os.path.exists(path):
+        return False
+    return False
 
 # 실행 코드
 video_url = input('Input download youtube url: ')
 download_path = 'downloads'
 
-video_file = download_youtube_video(video_url, download_path)
-#video_file = ''
-#file_name = ''
+if is_internet_address(video_url):
+    video_file = download_youtube_video(video_url, download_path)
+else:
+    video_file = video_url
+
+file_name = get_filename_from_path(video_url)
 
 audio_path = 'downloads\\{0}.mp3'.format(file_name[0:-4])
 srt_path = 'downloads\\{0}_en.srt'.format(file_name[0:-4])
-#srt_path = 'C:\\Users\\young\\Documents\\Github\\HelloAI\\downloads\\hhd800.com@STARS-999._en.srt'
 translated_srt_path = 'downloads\\{0}.srt'.format(file_name[0:-4])
-
-#srt_path = 'C:\\Users\\young\\Documents\\Github\\HelloAI\\downloads\\Full Keynote Satya Nadella at Microsoft Build 2024_en.srt'
-#translate_srt_path = 'C:\\Users\\young\\Documents\\Github\\HelloAI\\downloads\\Full Keynote Satya Nadella at Microsoft Build 2024.srt'
 
 if video_file:
     extract_audio(video_file, audio_path)
