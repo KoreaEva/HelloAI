@@ -1,14 +1,14 @@
 import openai
-import streamlit as st
 
-openai.api_key = "8a8e7d4d1700468f9bcafc6f48a89216"
-openai.api_base = "https://helloairad.openai.azure.com/"
+openai.api_key = "e835aefd70124e6b80915bb4d2a722c8"
+openai.azure_endpoint = "https://llmlab-openai-001.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = "2023-05-15"
 
+#   MakeResume function
 def MakeResume(name, job, content):
-    resume = openai.ChatCompletion.create(
-    engine="devmodel", # engine = "deployment_name".
+    resume = openai.chat.completions.create(
+    model="dev-gpt-35-turbo", # engine = "deployment_name".
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "내 이름은" + name},
@@ -20,32 +20,27 @@ def MakeResume(name, job, content):
     result = resume.choices[0].message.content
     return result
 
-st.header('Welcome to ChatGPT', divider='rainbow')
-st.write('안녕하세요 반갑습니다. ChatGPT의 세계로 오신 것을 환영합니다.')
+print('안녕하세요 반갑습니다. AI 이력서 생성기 입니다.')
 
 # st.write('먼저 여러분의 이름을 입력하세요')
-name = st.text_input('이름을 입력해 주세요')
+name = input('이름을 입력해 주세요: ')
 
 if(name):
-    st.write(name + '님 환영합니다.')
+    print(name + '님 환영합니다.')
 
-job = st.selectbox('여러분들의 직업을 선택하세요',('회사원','소프트웨어 개발자','군인','크리에이터','작가'))
+job = input('여러분들의 직업을 입력하세요 ex)회사원,소프트웨어 개발자,군인,크리에이터,작가\n')
 
 if(job):
-    st.write(job)
+    print(job)
 
-content = st.text_area('본인의 이력을 쓰세요')
-st.write(content)
+content = input('본인의 이력을 쓰세요:\n')
+print(content)
 
-button_click = st.button('이력서 생성')
+input('엔터키를 입력하면 이력서를 생성합니다.\n')
 
-if(button_click):
-    st.write('이력서 생성중')
+print('Wait for it...')
 
-    with st.spinner('Wait for it...'):
-        result = MakeResume(name=name, job=job, content=content)
-        st.success('Done!')
+result = MakeResume(name=name, job=job, content=content)
 
-    st.write('## 생성된 이력서')
-    st.divider()
-    st.write(result);
+print('## 생성된 이력서')
+print(result)
