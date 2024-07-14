@@ -14,7 +14,7 @@ RESOURCE_GROUP="RG"
 # Ceate Group 
 #az ad group delete --display-name "Lab"  --mail-nickname "Lab"
 
-#사용자 삭제
+사용자 삭제
 i=1
 while [ $i -lt $TOTAL_USERS ]
 do

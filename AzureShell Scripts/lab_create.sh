@@ -1,4 +1,4 @@
-TOTAL_USERS=40
+TOTAL_USERS=101
 USER_PASSWORD="!Seoul2024"
 
 #TENANT="msaischool.onmicrosoft.com"
